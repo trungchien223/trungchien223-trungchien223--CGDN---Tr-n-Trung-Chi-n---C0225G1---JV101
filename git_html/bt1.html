@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giao diện học tập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    select {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    .lesson-list {
+      list-style: none;
+      padding: 0;
+      width: 50%;
+    }
+    .lesson-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <label for="courseSelect">Hệ thống CodeGym:</label><br>
+  <select id="courseSelect">
+    <option value="course1">CodeGym SIS</option>
+    <option value="course2">CodeGym Projects</option>
+    <option value="course3">CodeGym Bob</option>
+  </select>
+
+  <ul class="lesson-list">
+    <li class="lesson-item">
+      <a href="https://james.codegym.vn/mod/hvp/view.php?id=15303">[Bài giảng] Thuật toán (Quiz)</a>
+      <input type="checkbox">
+    </li>
+    <li class="lesson-item">
+      <a href="https://james.codegym.vn/mod/page/view.php?id=15304">[Bài đọc] Các bước lập trình để giải quyết vấn đề</a>
+      <input type="checkbox">
+    </li>
+    <li class="lesson-item">
+      <a href="https://james.codegym.vn/mod/page/view.php?id=15304">[Bài đọc] Pseudo-code và flowchart</a>
+      <input type="checkbox">
+    </li>
+    <li class="lesson-item">
+      <a href="https://james.codegym.vn/mod/assign/view.php?id=15307">[Thực hành] Thuật toán chuyển đổi nhiệt độ</a>
+      <input type="checkbox">
+    </li>
+  </ul>
+</body>
+</html>
