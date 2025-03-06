@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .remember-forgot {
+            font-size: 14px;
+        }
+        .login-form input{
+            padding: 6px;
+            margin: 10px;
+            width: 80%;
+        }
+        .login-button{
+            width: 85%;
+            padding: 10px;
+            background-color: #2c2c84;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <img width="250" src="https://codegym.vn/wp-content/uploads/2017/03/CodeGym-3-02-copy.jpg">
+    <h3>Sign In</h3>
+    <form class="login-form">
+        <input type="email" placeholder="Username / Email">
+        <input type="password" placeholder="Password">
+    </form>
+    <div class="remember-forgot">
+        <input type="checkbox" checked="checked" name="remember"><label>Remember username</label>
+        <a href="https://codegym.vn/wp-content/uploads/2017/03/CodeGym-3-02-copy.jpg">Forgot Password?</a>
+    </div>
+    <button type="submit" class="login-button">Log in</button>
+</div>
+</body>
+</html>

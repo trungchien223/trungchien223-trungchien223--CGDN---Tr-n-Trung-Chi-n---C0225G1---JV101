@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .orange {
+            background: orange;
+            color: white;
+            text-align: center;
+        }
+        input[type=text], input[type=email] {
+            width: 30%;
+            padding: 3px;
+            margin-top: 3px;
+            margin-bottom: 8px;
+        }
+         input[type=email]{
+             margin-left: 24px;
+         }
+         .hobby{
+             color: orange;
+         }
+    </style>
+</head>
+<body>
+<form>
+    <h2 class="orange">SỞ THÍCH CỦA BẠN</h2>
+    <label style="color:blue">Họ và tên</label>
+    <input type="text" name="yourname"><br>
+    <label style="color: blue">Email</label>
+    <input type="email" name="email"><br>
+    <span style="color:blue">Sở thích</span>
+    <div class="hobby">
+        <input type="checkbox" name="hobby"><span>Thể thao</span>
+        <input type="checkbox" name="hobby"><span>Âm nhạc</span>
+        <input type="checkbox" name="hobby"><span>Đọc sách</span>
+        <input type="checkbox" name="hobby"><span>Lướt web</span>
+        <input type="checkbox" name="hobby"><span>Chơi game</span>
+        <input type="checkbox" name="hobby"><span>Điện ảnh</span>
+        <input type="checkbox" name="hobby"><span>Du lịch</span>
+    </div>
+    <button type="submit">Gửi thông tin</button>
+    <button type="reset">Nhập lại</button>
+</form>
+</body>
+</html>
