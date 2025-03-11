@@ -6,26 +6,35 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .login-container {
-            background: white;
+            background-color: antiquewhite;
+            width: 400px;
             padding: 20px;
-            text-align: center;
+            margin: 20px auto;
         }
 
-        .remember-forgot {
-            font-size: 14px;
-        }
-        .login-form input{
+        input[type=email], input[type=password] {
             padding: 6px;
             margin: 10px;
             width: 80%;
         }
+
+        input[type=checkbox] {
+            margin-left: 10px;
+        }
+
+        label {
+            margin-right: 25px;
+        }
+
+        .forgot-password {
+            text-decoration: none;
+        }
         .login-button{
+            margin-left: 10px;
+            margin-top: 10px;
             width: 85%;
             padding: 10px;
             background-color: #2c2c84;
@@ -42,13 +51,13 @@
     <h3>Sign In</h3>
     <form class="login-form">
         <input type="email" placeholder="Username / Email">
-        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Password"> <br>
+        <input type="checkbox" name="" id="">
+        <label>Remember username</label>
+        <a class="forgot-password" href="https://james.codegym.vn/login/forgot_password.php">Forgot Password?</a>
+        <button type="submit" class="login-button">Log in</button>
     </form>
-    <div class="remember-forgot">
-        <input type="checkbox" checked="checked" name="remember"><label>Remember username</label>
-        <a href="https://codegym.vn/wp-content/uploads/2017/03/CodeGym-3-02-copy.jpg">Forgot Password?</a>
-    </div>
-    <button type="submit" class="login-button">Log in</button>
+
 </div>
 </body>
 </html>

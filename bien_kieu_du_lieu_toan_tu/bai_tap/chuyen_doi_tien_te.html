@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            <label for="Amount">Amount</label>
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="Amount">
+        </td>
+        <td>
+            <select id="currency">
+                <option value="vnd_to_usd">VND to USD</option>
+                <option value="usd_to_vnd">USD to VND</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ChangeMoney()">Convert</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="result"></p>
+<script>
+    function ChangeMoney() {
+        let amount = parseFloat(document.getElementById("Amount").value);
+        let currency = (document.getElementById("currency").value);
+        let result = (document.getElementById("result"));
+        const exchangeRate = {
+            vnd_to_usd: 0.000043,
+            usd_to_vnd: 26000,
+        }
+        let exchangedAmount;
+        if (currency === "vnd_to_usd") {
+            exchangedAmount = amount * exchangeRate.vnd_to_usd;
+            result.textContent = `${amount} VND = ${exchangedAmount} USD`;
+        } else {
+            exchangedAmount = amount * exchangeRate.usd_to_vnd;
+            result.textContent = `${amount} USD = ${exchangedAmount} VND`;
+        }
+    }
+</script>
+</body>
+</html>
