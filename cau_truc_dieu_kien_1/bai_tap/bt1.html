@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Enter a number"));
+    let b = parseFloat(prompt("Enter a number"));
+    let c = parseFloat(prompt("Enter a number"));
+
+    function isRightIsoscelesTriangle(a, b, c) {
+        return (
+            (a === b && a**2+b**2===c**2) || (b === c && b**2+c**2===a**2) || (a === c && a**2+c**2===b**2)
+        );
+    }
+    if (isRightIsoscelesTriangle(a, b, c)) {
+        alert("ba cạnh là cạnh của tam giác vuông cân")
+    }else {
+        alert("ba cạnh không phải là cạnh của tam giác vuông cân")
+    }
+</script>
+</body>
+</html>

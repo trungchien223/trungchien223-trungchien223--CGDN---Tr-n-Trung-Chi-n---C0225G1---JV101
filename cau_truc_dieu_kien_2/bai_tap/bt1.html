@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            <label for="Amount">Amount</label>
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="Amount">
+        </td>
+        <td>
+            <select id="currency">
+                <option value="vnd_to_usd">VND to USD</option>
+                <option value="usd_to_vnd">USD to VND</option>
+                <option value="vnd_to_jpy">VND to JPY</option>
+                <option value="jpy_to_vnd">JPY to VND</option>
+                <option value="vnd_to_cny">VND to CNY</option>
+                <option value="cny_to_vnd">CNY to VND</option>
+                <option value="vnd_to_gbp">VND to GBP</option>
+                <option value="gbp_to_vnd">GBP to VND</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="changeMoney()">Convert</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="result"></p>
+<script>
+    function changeMoney() {
+        let amount = parseFloat(document.getElementById("Amount").value);
+        let currency = (document.getElementById("currency").value);
+        let result = (document.getElementById("result"));
+        let exchangedAmount;
+        let currencyFrom, currencyTo;
+        switch (currency) {
+            case "vnd_to_usd":
+                exchangedAmount = amount * 0.000043;
+                currencyFrom = "VND";
+                currencyTo = "USD";
+                break;
+            case "usd_to_vnd":
+                exchangedAmount = amount * 26000;
+                currencyFrom = "USD";
+                currencyTo = "VND";
+                break;
+            case "vnd_to_jpy":
+                exchangedAmount = amount * 0.00581;
+                currencyFrom = "VND";
+                currencyTo = "JPY";
+                break;
+            case "jpy_to_vnd":
+                exchangedAmount = amount * 172.153;
+                currencyFrom = "JPY";
+                currencyTo = "VND";
+                break;
+            case "vnd_to_cny":
+                exchangedAmount = amount * 0.00028;
+                currencyFrom = "VND";
+                currencyTo = "CNY";
+                break;
+            case "cny_to_vnd":
+                exchangedAmount = amount * 3.524;
+                currencyFrom = "CNY";
+                currencyTo = "VND";
+                break;
+            case "vnd_to_gbp":
+                exchangedAmount = amount * 0.00003;
+                currencyFrom = "VND";
+                currencyTo = "GBP";
+                break;
+            case "gbp_to_vnd":
+                exchangedAmount = amount * 32.937;
+                currencyFrom = "GBP";
+                currencyTo = "VND";
+                break;
+        }
+        result.textContent = `${amount} ${currencyFrom} = ${exchangedAmount} ${currencyTo}`;
+    }
+</script>
+</body>
+</html>

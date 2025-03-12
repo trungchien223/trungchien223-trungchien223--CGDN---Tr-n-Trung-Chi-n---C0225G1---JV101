@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Enter your salary"));
+    let hour = parseInt(prompt("Enter your Hour"));
+    let bonus;
+    if (hour >= 200){
+        bonus = salary * 20/100
+        alert("Salary Bonus: " + bonus);
+    }else if (hour >= 100 && hour < 200){
+        bonus = salary * 10/100
+        alert("Salary Bonus: " + bonus);
+    }else {
+        alert("khong thuong")
+    }
+</script>
+</body>
+</html>

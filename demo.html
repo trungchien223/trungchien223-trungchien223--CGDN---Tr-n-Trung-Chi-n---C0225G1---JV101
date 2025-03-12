@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mainScore = +prompt("enter score");
+    let matchesPlayed = +prompt("enter matches played");
+    let matchesWon = +prompt("enter matches won");
+    let winRate = (matchesWon / matchesPlayed) * 100;
+    if (matchesPlayed < 5) {
+        alert("tân binh")
+    } else if (mainScore < 1000 || winRate < 50) {
+        alert("đồng")
+    } else if (mainScore >= 1000 && mainScore < 5000 && winRate >= 50) {
+        alert("bạc")
+    } else if (mainScore >= 5000 && mainScore < 10000 && winRate >= 60) {
+        alert("vàng")
+    } else {
+        alert("kim cương")
+    }
+</script>
+</body>
+</html>

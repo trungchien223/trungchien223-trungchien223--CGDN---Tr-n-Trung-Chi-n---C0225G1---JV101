@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            width: 300px;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        div {
+            margin-top: 20px;
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h2 {
+            margin-left: 110px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 12px;
+            color: red;
+            margin-top: 0px;
+        }
+
+        button {
+            background-color: gray;
+            border: 1px solid yellow;
+            color: white;
+
+        }
+
+        div span {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h2>Đăng ký</h2>
+    <div>
+        <label for="id">ID</label>
+        <input id="id" name="id" onblur="checkValidate()">
+        <span id="idTick"></span>
+    </div>
+    <p id="idError"></p>
+    <div>
+        <label for="name">name</label>
+        <input id="name" name="name" onblur="checkValidate()">
+        <span id="nameTick"></span>
+    </div>
+    <p id="nameError"></p>
+    <div>
+        <label for="age">Age</label>
+        <input id="age" name="age" onblur="checkValidate()">
+        <span id="ageTick"></span>
+    </div>
+    <p id="ageError"></p>
+    <div style="justify-content: center">
+        <button disabled type="submit" id="btn-save">Save</button>
+    </div>
+
+</form>
+<script>
+    function checkValidate() {
+        let isValid = true;
+        let idInput = document.getElementById("id");
+        let idError = document.getElementById("idError");
+        let idTick = document.getElementById("idTick");
+
+        if (idInput.value.trim() === "") {
+            idError.textContent = "ID không được để trống!";
+            idTick.innerHTML = "❌";
+            idTick.style.color = "red";
+            isValid = false;
+        } else {
+            idError.textContent = "";
+            idTick.innerHTML = "✅";
+            idTick.style.color = "green";
+        }
+        let nameInput = document.getElementById("name");
+        let nameError = document.getElementById("nameError");
+        let nameTick = document.getElementById("nameTick");
+
+        if (nameInput.value.trim() === "") {
+            nameError.textContent = "Tên không được để trống!";
+            nameTick.innerHTML = "❌";
+            nameTick.style.color = "red";
+            isValid = false;
+        } else {
+            nameError.textContent = "";
+            nameTick.innerHTML = "✅";
+            nameTick.style.color = "green";
+        }
+        let ageInput = document.getElementById("age");
+        let ageError = document.getElementById("ageError");
+        let ageTick = document.getElementById("ageTick");
+
+        if (ageInput.value.trim() === "") {
+            ageError.textContent = "Tuổi phải là số và lớn hơn 0!";
+            ageTick.innerHTML = "❌";
+            ageTick.style.color = "red";
+            isValid = false;
+        } else {
+            ageError.textContent = "";
+            ageTick.innerHTML = "✅";
+            ageTick.style.color = "green";
+        }
+        document.getElementById("btn-save").disabled = !isValid;
+    }
+</script>
+</body>
+</html>

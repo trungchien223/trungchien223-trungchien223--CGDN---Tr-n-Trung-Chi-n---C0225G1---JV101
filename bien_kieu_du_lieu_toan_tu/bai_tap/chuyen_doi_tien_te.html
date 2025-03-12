@@ -23,14 +23,14 @@
             </select>
         </td>
         <td>
-            <button onclick="ChangeMoney()">Convert</button>
+            <button onclick="changeMoney()">Convert</button>
         </td>
     </tr>
 </table>
 <br>
 <p id="result"></p>
 <script>
-    function ChangeMoney() {
+    function changeMoney() {
         let amount = parseFloat(document.getElementById("Amount").value);
         let currency = (document.getElementById("currency").value);
         let result = (document.getElementById("result"));
