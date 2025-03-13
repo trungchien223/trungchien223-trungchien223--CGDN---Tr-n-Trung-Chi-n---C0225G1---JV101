@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Cửu Chương</title>
+</head>
+<body>
+<h2>Bảng Cửu Chương</h2>
+<table id="multiplicationTable" border="1"></table>
+
+<script>
+    function generateMultiplicationTable() {
+        let table = document.getElementById("multiplicationTable");
+
+        for (let i = 1; i <= 9; i++) {
+            let row = table.insertRow();
+
+            for (let j = 1; j <= 9; j++) {
+                let cell = row.insertCell();
+                cell.innerText = `${i} × ${j} = ${i * j}`;
+            }
+        }
+    }
+
+    generateMultiplicationTable();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let N;
+    do {
+        N = prompt("Hãy nhập một số N (0 < N < 100):");
+        N = Number(N); // Chuyển đổi giá trị nhập vào thành số
+    } while (isNaN(N) || N <= 0 || N >= 100);
+
+    console.log("Số hợp lệ bạn đã nhập là:", N);
+
+</script>
+</body>
+</html>
