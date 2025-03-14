@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ageFather = +prompt("Enter your age Father");
+    let ageChild = +prompt("Enter your age Child");
+    let year=0;
+    while (ageFather !== 2*ageChild) {
+        ageFather++
+        ageChild++
+        year++
+    }
+    alert(`sau ${year} nam, tuoi cha là ${ageFather} va tuoi con la ${ageChild}`);
+</script>
+</body>
+</html>

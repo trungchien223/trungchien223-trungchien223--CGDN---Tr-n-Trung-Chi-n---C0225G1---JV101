@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngày trong tháng & năm</title>
+</head>
+<body>
+<script>
+    let month = parseInt(prompt("Nhập tháng (1-12):"));
+    let year = parseInt(prompt("Nhập năm:"));
+    let days;
+
+    // Kiểm tra số ngày trong tháng
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            days = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            days = 30;
+            break;
+        case 2:
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                days = 29;
+            } else {
+                days = 28;
+            }
+            break;
+        default:
+            alert("Tháng không hợp lệ!");
+            throw new Error("Tháng không hợp lệ!");
+    }
+
+    // Kiểm tra số ngày trong năm
+    let daysInYear = ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) ? 366 : 365;
+
+    // Hiển thị kết quả
+    alert(`Tháng ${month} năm ${year} có ${days} ngày.\nNăm ${year} có ${daysInYear} ngày.`);
+</script>
+</body>
+</html>
