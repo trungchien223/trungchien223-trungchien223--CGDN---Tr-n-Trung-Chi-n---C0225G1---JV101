@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhập độ dài của mảng
+    let n = parseInt(prompt("Nhập số phần tử của mảng:"));
+    // Nhập từng phần tử của mảng
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
+        arr[i] = num;
+    }
+    // Hiển thị mảng sau khi nhập
+    console.log("Mảng vừa nhập:", arr);
+    let result = "";
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+        let sqrt = Math.sqrt(num); // Tính căn bậc hai
+        if (sqrt * sqrt === num) {
+            result += `${num} là số chính phương\n`;
+        } else {
+            result += `${num} không phải là số chính phương\n`;
+        }
+    }
+    alert(result);
+</script>
+</body>
+</html>

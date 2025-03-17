@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhập độ dài của mảng
+    while (true){
+        let n = parseInt(prompt("Nhập số phần tử của mảng:"));
+        if (n>=0){
+            break;
+        }
+        alert("nhập số nguyên dương");
+    }
+    // Nhập từng phần tử của mảng
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
+        arr[i] = num;
+    }
+    // Hiển thị mảng sau khi nhập
+    console.log("Mảng vừa nhập:", arr);
+
+    // Đếm số lượng phần tử chẵn và lẻ
+    let evenCount = 0;
+    let oddCount = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evenCount++;
+        } else {
+            oddCount++;
+        }
+    }
+    // Kiểm tra điều kiện và hiển thị kết quả
+    if (evenCount === oddCount) {
+        alert("OK");
+    } else {
+        alert("NO");
+    }
+
+</script>
+</body>
+</html>
