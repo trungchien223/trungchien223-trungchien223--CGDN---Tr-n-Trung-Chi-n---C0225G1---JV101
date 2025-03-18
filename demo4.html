@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = parseInt(prompt("Nhập số phần tử của mảng:"));
+        if (n <= 0 && n >= 20 || isNaN(n)) {
+            alert("Nhập lại!");
+        }
+    } while (n <= 0 && n >= 20|| isNaN(n));
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
+        arr[i] = num;
+    }
+    console.log("Mảng vừa nhập:", arr);
+    let evenSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0 && arr[i] % 3 === 0) {
+            evenSum++
+        }
+    }
+    alert(`có ${evenSum} phần tử ở vị trí chẵn chia hết cho 3`);
+</script>
+<script>
+    // let n;
+    // do {
+    //     n = parseInt(prompt("Nhập số phần tử của mảng:"));
+    //     if (n <= 0 && n >= 20 || isNaN(n)) {
+    //         alert("Nhập lại!");
+    //     }
+    // } while (n <= 0 && n >= 20||isNaN(n));
+    // let arr = [];
+    // for (let i = 0; i < n; i++) {
+    //     let num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
+    //     arr[i] = num;
+    // }
+    // console.log("Mảng vừa nhập:", arr);
+    // let count = "";
+    // for (let i = 0; i < arr.length; i++) {
+    //     let num = arr[i];
+    //     let sqrt = Math.sqrt(num);
+    //     if (sqrt * sqrt === num) {
+    //         count++
+    //     }
+    // }
+    // alert(`có ${count} số chính phương`);
+</script>
+</body>
+</html>
