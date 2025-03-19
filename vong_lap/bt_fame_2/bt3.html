@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 5;
+    let dong = "";
+    // for (let i = 1; i <= a; i++) {
+    //     let spaces = " ".repeat(a - i); // Tạo khoảng trắng để căn phải
+    //     let stars = "*".repeat(i); // Tạo dãy sao
+    //     console.log(spaces + stars); // In ra màn hình
+    // }
+
+    // for(let i=a;i>0;i--){
+    //     console.log("*".repeat(i))
+    // }
+    for(let i=1;i<=a;i++){
+        for(let j=1;j<=i;j++){
+            dong+="*";
+        }
+        dong+="<br>";
+    }
+    document.write(dong);
+
+
+    // for (let i = 5; i >= 1; i--) {
+    //     for (let j = 1; j <= i; j++) {
+    //         dong += "*"
+    //     }
+    //     dong += "<br>";
+    // }
+    // document.write(dong);
+
+    //
+    // for (let i = 1; i <= a; i++) {
+    //     for (let j = 1; j <= a - i; j++) {
+    //         dong += "&ensp;";
+    //     }
+    //     for (let k = 1; k <= i; k++) {
+    //         dong += "*";
+    //     }
+    //     dong += "<br>";
+    // }
+    //
+    // document.write(dong);
+
+</script>
+</body>
+</html>

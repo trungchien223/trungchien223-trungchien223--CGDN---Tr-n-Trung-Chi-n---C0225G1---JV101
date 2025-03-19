@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cot = 17;
+    let dong = 7;
+    for (let i = 0; i < dong; i++) {
+        let hinh = "";
+        for (let j = 0; j < cot; j++) {
+            if (i === 0 || i === dong - 1 || j === 0 || j === cot - 1) {
+                hinh += "*";
+            } else {
+                hinh += "&nbsp&nbsp";
+            }
+        }
+        document.write(hinh + "<br>");
+    }
+
+</script>
+</body>
+</html>
