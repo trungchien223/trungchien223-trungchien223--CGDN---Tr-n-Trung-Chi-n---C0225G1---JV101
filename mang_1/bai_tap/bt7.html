@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 6, 5, 6, 7, 8, 9, 10];
+    let inputV = parseInt(prompt("nhap v tu 1 den 10"));
+    let checkV = false;
+    let index = -1
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === inputV) {
+            index = i;
+            arr.splice(index, 1);
+            arr.push(0);
+            checkV = true;
+        }
+    }
+    if (checkV) {
+        document.write("da xoa "+ inputV + " thi mang se con lai la:" );
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + ", ");
+        }
+    } else {
+       document.write("so vua nhap khong co trong mang da cho");
+    }
+</script>
+</body>
+</html>

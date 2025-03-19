@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //0-50kWh=1.234
+    //51-100kWh=1.567
+    //101-200kWh=1.890
+    //tren 200kWh=2.123
+    let kWh=parseFloat(prompt("nhap kWh"));
+    if(kWh<=50){
+        chiphi=kWh*1.234 ;
+    }else if(kWh<=100){
+        chiphi=kWh*1.567 ;
+    }else if(kWh<=200){
+        chiphi=kWh*1.890 ;
+    }else {
+        chiphi=kWh*2.123 ;
+    }
+    alert(chiphi);
+</script>
+</body>
+</html>

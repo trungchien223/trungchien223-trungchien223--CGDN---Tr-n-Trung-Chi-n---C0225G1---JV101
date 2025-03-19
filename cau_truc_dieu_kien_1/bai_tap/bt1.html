@@ -2,23 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Luyện tập cấu trúc điều kiện</title>
 </head>
 <body>
 <script>
-    let a = parseFloat(prompt("Enter a number"));
-    let b = parseFloat(prompt("Enter a number"));
-    let c = parseFloat(prompt("Enter a number"));
-
-    function isRightIsoscelesTriangle(a, b, c) {
-        return (
-            (a === b && a**2+b**2===c**2) || (b === c && b**2+c**2===a**2) || (a === c && a**2+c**2===b**2)
-        );
-    }
-    if (isRightIsoscelesTriangle(a, b, c)) {
-        alert("ba cạnh là cạnh của tam giác vuông cân")
-    }else {
-        alert("ba cạnh không phải là cạnh của tam giác vuông cân")
+    let a = parseInt(prompt("nhập a"));
+    let b = parseInt(prompt("nhập b"));
+    if (a % b === 0) {
+        alert(a+"chia hết cho"+b);
+    } else {
+        alert(a+"không chia hết cho"+b )
     }
 </script>
 </body>

@@ -6,25 +6,16 @@
 </head>
 <body>
 <script>
-    let n;
-    do {
-        n = parseInt(prompt("nhap so"));
-        if (isNaN(n)) {
-            alert("phai la so")
+    let arr=['a','b','c','13','8','5','19'];
+    let digits=['0','1','2','3','4','5','6'];
+    let count=0;
+    for(let i=0;i<arr.length;i++) {
+        if (digits.includes(arr[i])) {
+            count++;
         }
-    } while (isNaN(n));
-    let arr = new Array(n)
-    for (let i = 0; i < n; i++) {
-        let num;
-        do {
-            num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
-            if (arr.includes(num)) {
-                alert("phan tu da ton tai");
-            }
-        } while (arr.includes(num));
-        arr[i] = num;
     }
-    console.log("mang khong trung nhau", arr);
+    console.log("mang ki tu", arr);
+    console.log("số ký tự số trong mảng là :" , count);
 </script>
 </body>
 </html>

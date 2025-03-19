@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được</title>
+</head>
+<body>
+<script>
+    let doanhSo = parseFloat(prompt("Nhập doanh số bán hàng"));
+    let hoaHong;
+    if (doanhSo <= 1000000) {
+        hoaHong = doanhSo * 0.05; // hoa hong 5%
+    } else if (doanhSo <= 5000000) {
+        hoaHong = doanhSo * 0.1; // hoa hong 10%
+    } else if (doanhSo <= 10000000) {
+        hoaHong = doanhSo * 0.2; // hoa hong 20%
+    } else {
+        hoaHong = doanhSo * 0.3;
+    }
+    alert(hoaHong);
+</script>
+</body>
+</html>

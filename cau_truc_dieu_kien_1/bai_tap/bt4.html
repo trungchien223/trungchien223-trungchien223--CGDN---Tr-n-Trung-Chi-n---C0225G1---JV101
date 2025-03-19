@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị lớn nhất của ba số nguyên</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("số nguyên thứ 1"))
+    let b = parseInt(prompt("số nguyên thứ 2"))
+    let c = parseInt(prompt("số nguyên thứ 3"))
+    if (a>b){
+        if (a>c){
+            max=a
+        }else {
+            max=c
+        }
+    }else {
+       if (b>c){
+           max=b
+       }else {
+           max=c
+       }
+    }
+    alert(max)
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input1=prompt("nhap vao mot chuoi ki tu");
+    let input2=prompt("nhap vao mot chuo ki tu");
+    let arr1=input1.split(" ");
+    let arr2=input2.split(" ");
+    let check=true;
+    for(let i=0;i<arr1.length;i++){
+        if(arr1[i]!==arr2[i]){
+            check=false;
+        }
+    }
+    if(!check){
+        document.write("2 chuoi khong giong nhau");
+    }else {
+        document.write("2 chuoi giong nhau");
+    }
+</script>
+</body>
+</html>

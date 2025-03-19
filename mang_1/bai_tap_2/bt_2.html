@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m;
+    let n;
+    do {
+        m = parseInt(prompt("nhập số hàng (m):"));
+        n = parseInt(prompt("nhập số cột (n):"));
+        if (m <= 0 || n <= 0 || isNaN(m) || isNaN(n)) {
+            alert("số hàng và số cột phải là số nguyên dương");
+        }
+    } while (m <= 0 || n <= 0 || isNaN(m) || isNaN(n));
+    let arr = new Array(m);
+    for (let i = 0; i < m; i++) {
+        arr[i] = new Array(n);
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = parseInt(prompt(`nhập phần tử tại hàng ${i + 1}, cột ${j + 1}:`));
+        }
+    }
+    console.log(arr);
+    if (m===n) {
+        let sumDiagonal1 = 0;
+        let sumDiagonal2 = 0;
+        for (let i = 0; i < m; i++) {
+            sumDiagonal1 += arr[i][i];
+            sumDiagonal2 += arr[i][m-i-1];
+        }
+        let totalDiagonal = sumDiagonal1+sumDiagonal2;
+        console.log(`tong cua 2 duong cheo la ${totalDiagonal}`);
+    }else {
+        console.log("khong vuong");
+    }
+</script>
+</body>
+</html>

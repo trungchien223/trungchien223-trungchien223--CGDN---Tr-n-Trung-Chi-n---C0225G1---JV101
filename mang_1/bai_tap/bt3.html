@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    let totalIndex = 0;
+    let average = totalIndex / arr.length;
+    for (let i = 1; i < arr.length; i++) {
+        totalIndex += arr[i];
+    }
+    console.log(`Giá trị lớn nhất trong mảng là: ${max}` + `Giá trị trung bình của các phần tử trong mảng là: ${average}`);
+</script>
+</body>
+</html>

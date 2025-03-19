@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let baiKiemTra=parseInt(prompt("nhập điểm"));
+    let thiGiuaKy=parseInt(prompt("nhập điểm"));
+    let thiCuoiKy=parseInt(prompt("nhập điểm"));
+    let diemTrungBinh=(baiKiemTra+thiGiuaKy+thiCuoiKy)/3
+    if(diemTrungBinh>=8){
+        alert("loai gioi");
+    }else if (diemTrungBinh<=7){
+        alert("loai kha")
+    }else if (diemTrungBinh<=6){
+        alert("loai trung binh");
+    }else {
+        alert("loai yeu");
+    }
+</script>
+</body>
+</html>

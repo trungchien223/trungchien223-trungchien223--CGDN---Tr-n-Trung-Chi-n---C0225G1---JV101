@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("nhap a"));
+    let b=parseFloat(prompt("nhap b"));
+    switch(true){
+        case (a===0 && b===0):
+            alert("phuong trinh vo so nghiem");
+            break;
+        case (a===0 && b!==0):
+            alert("phuong trinh vo nghiem");
+            break;
+        default:
+            x=-b/a;
+            alert(x)
+            break;
+    }
+</script>
+</body>
+</html>
