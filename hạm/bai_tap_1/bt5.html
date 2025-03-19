@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stars=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+    let constellation=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function findConstellation(starName) {
+        let index = stars.indexOf(starName);
+        if (index !== -1) {
+            return `${starName} thuoc chom sao ${constellation[index]}`;
+        }else{
+            return `${starName} khong co trong danh sach`;
+        }
+    }
+        let inputStar=prompt("Enter Star Name");
+        let result=findConstellation(inputStar);
+        document.write(result);
+</script>
+</body>
+</html>

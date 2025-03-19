@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input =prompt("nhap");
+    let arr = input.split("");
+    function checkArray(arr) {
+        let number = false;
+        let word = false;
+        for (let i = 0; i < arr.length; i++) {
+            let num = arr[i];
+            if (num>="0"&&num<="9") {
+                number = true;
+            } else if(num>="a"&&num<="z"){
+                word = true;
+            }
+            if (number&&word){
+                return -1;
+            }
+        }
+        if (number) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    let result = checkArray(arr);
+    alert(result);
+</script>
+</body>
+</html>

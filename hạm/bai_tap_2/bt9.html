@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countCharacterInArray(arr,char){
+        let count=arr.filter(item=>item === char).length;
+        return count > 0 ? count : -1;
+    }
+    console.log(countCharacterInArray (['a','a','c','d'],'a'));
+</script>
+</body>
+</html>
