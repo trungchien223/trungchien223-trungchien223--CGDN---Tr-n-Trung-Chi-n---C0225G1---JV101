@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let studentsList = ["Vinh", "Nam"];
+    while (true) {
+        let choice = prompt(
+            "---------Quản lý sinh viên--------- \n" +
+            "Hãy nhập số để chọn đồ uống \n" +
+            "1. Hiển thị danh sách sinh viên \n" +
+            "2. Thêm mới sinh viên \n" +
+            "3. Xóa sinh viên \n" +
+            "4. Kết thúc chương trình"
+        );
+        switch (choice) {
+            case "1":
+                displayStudents()
+                break;
+            case "2":
+                addStudents()
+                break;
+            case "3":
+                deleteStudents()
+                break;
+            case "4":
+                alert("Kết thúc chương trình");
+                break;
+        }
+        if (choice === "4") {
+            break;
+        }
+    }
+
+    function displayStudents() {
+        let str = "";
+        str += "Danh sách sinh viên:\n\n"
+        for (let i = 0; i < studentsList.length; i++) {
+            str += `${i + 1}. ${studentsList[i]}\n`;
+        }
+        alert(str);
+    }
+
+    function addStudents() {
+        let newStudents = prompt("nhập tên mới");
+        studentsList.push(newStudents);
+        displayStudents();
+
+    }
+
+    function deleteStudents() {
+        if (studentsList.length === 0) {
+            alert("Danh sách sinh viên trống!");
+            return;
+        }
+        let listToShow = "Danh sách sinh viên:\n";
+        for (let i = 0; i < studentsList.length; i++) {
+            listToShow += `${i + 1}. ${studentsList[i]}\n`;
+        }
+        let index = prompt(listToShow + "\nNhập số thứ tự của sinh viên cần xóa:");
+
+        index = parseInt(index);
+        let studentName = studentsList[index - 1];
+        
+        let conf = confirm(`Bạn có chắc chắn muốn xóa sinh viên: ${studentName}`);
+
+        if (conf) {
+            studentsList.splice(index - 1, 1);
+            alert(`Đã xóa sinh viên: ${studentName}`);
+            displayStudents();
+        } else {
+            alert("Hủy xóa sinh viên.");
+        }
+    }
+</script>
+</body>
+</html>
