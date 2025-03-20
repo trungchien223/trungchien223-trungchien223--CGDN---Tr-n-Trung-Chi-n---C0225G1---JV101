@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function checkPrime(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+    alert(checkPrime([1, 2, 3, 4, 5]));
+</script>
+</body>
+</html>

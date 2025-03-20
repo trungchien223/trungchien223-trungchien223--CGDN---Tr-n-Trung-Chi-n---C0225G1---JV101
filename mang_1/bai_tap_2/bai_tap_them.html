@@ -6,28 +6,43 @@
 </head>
 <body>
 <script>
-    // let n;
-    // do {
-    //     n = parseInt(prompt("Nhập số phần tử của mảng:"));
-    //     if (isNaN(n)) {
-    //         alert("Nhập lại");
-    //     }
-    // } while (isNaN(n));
-    // let arr = new Array(n);
-    // for (let i = 0; i < n; i++) {
-    //     let num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
-    //     arr[i] = num;
-    // }
-    // console.log("Mảng vừa nhập:", arr);
-    // let increasingSteadily = arr[1] - arr[0];
-    // let check = true;
-    // for (let i = 0; i < arr.length - 1; i++) {
-    //     if (arr[i] >= arr[i + 1] !== increasingSteadily) {
-    //         check = false;
-    //         break;
-    //     }
-    // }
-    // alert(check);
+    let n;
+    do {
+        n = parseInt(prompt("Nhập số phần tử của mảng:"));
+        if (isNaN(n) || n < 2) {  // Đảm bảo nhập ít nhất 2 phần tử
+            alert("Nhập lại (số phần tử phải là số >= 2)");
+        }
+    } while (isNaN(n) || n < 2);
+
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        let num;
+        do {
+            num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
+            if (isNaN(num)) {
+                alert("Vui lòng nhập số hợp lệ!");
+            }
+        } while (isNaN(num));
+        arr[i] = num;
+    }
+
+    console.log("Mảng vừa nhập:", arr);
+
+    // Kiểm tra xem mảng có tăng đều không
+    let diff = arr[1] - arr[0]; // Hiệu số giữa hai phần tử đầu tiên
+    let isSteadyIncreasing = true;
+
+    for (let i = 1; i < arr.length - 1; i++) {
+        if (arr[i + 1] - arr[i] !== diff) { // Kiểm tra hiệu số có giống nhau không
+            isSteadyIncreasing = false;
+            break;
+        }
+    }
+    if (isSteadyIncreasing) {
+        alert("ok");
+    }else{
+        alert("no");
+    }
 </script>
 <script>
     // let n;
@@ -52,18 +67,9 @@
     // }
     // if(check){
     //     alert ("ok")
-    // }else
+    // }else{
     //     alert("no")
-</script>
-<script>
-    let chuoi=prompt("nhap mot so co dang phan so");
-    chuoi=chuoi.split("/");
-    if (!chuoi.includes("/")){
-        alert("khong phai la phan so");
-    }else{
-        let tuSo=parseInt(chuoi[0]);
-        let mauSo=parseInt(chuoi[1]);
-    }
+    // }
 </script>
 </body>
 </html>

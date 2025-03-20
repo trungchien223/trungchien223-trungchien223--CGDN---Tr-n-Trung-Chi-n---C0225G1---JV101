@@ -6,19 +6,20 @@
 </head>
 <body>
 <script>
-    let input =prompt("nhap");
+    let input = prompt("nhap");
     let arr = input.split("");
+
     function checkArray(arr) {
         let number = false;
         let word = false;
         for (let i = 0; i < arr.length; i++) {
             let num = arr[i];
-            if (num>="0"&&num<="9") {
+            if (num >= "0" && num <= "9") {
                 number = true;
-            } else if(num>="a"&&num<="z"){
+            } else if (num >= "a" && num <= "z") {
                 word = true;
             }
-            if (number&&word){
+            if (number && word) {
                 return -1;
             }
         }
