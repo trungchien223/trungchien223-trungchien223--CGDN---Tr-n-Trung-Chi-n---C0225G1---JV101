@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class dienThoai {
+        constructor(dungLuongPin) {
+            this.trangThai = false; // mặc định tắt
+            this.duongLuongPin = dungLuongPin
+            this.vungNhoTinDen = [];
+            this.vungNhoTinGui = [];
+            this.vungNhoSoanTin = "";
+        }
+
+        getStatus() {
+            return this.trangThai;
+        }
+
+        batTatDienThoai() {
+            this.trangThai = !this.trangThai;
+        }
+
+        sacPin() {
+            if (dungLuongPin < 10) {
+                this.duongLuongPin = 100;
+            } else {
+                alert("dien thoai chua can sac");
+            }
+        }
+
+        soanTinNhan(text) {
+            this.vungNhoSoanTin = text;
+        }
+
+        guiTinNhan(dienThoai, text) {
+            this.soanTinNhan(text);
+            dienThoai.vungNhoTinDen.push(this.vungNhoSoanTin);
+            this.vungNhoTinGui.push(this.vungNhoSoanTin);
+        }
+
+        nhanTinNhan(text) {
+            this.vungNhoTinDen.push(text);
+        }
+        xemTinNhanDaGui(){
+            for (let i = 0; i < this.vungNhoTinGui.length; i++) {
+                alert()
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

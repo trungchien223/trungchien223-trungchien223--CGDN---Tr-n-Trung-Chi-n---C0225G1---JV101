@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = parseInt(prompt("nhap so"));
+    function changeBinary(num) {
+        let binary = "";
+        while (num > 0) {
+            let remainder = num % 2;
+            binary = remainder+binary;
+            num = parseInt(num / 2);
+        }
+        return binary;
+    }
+
+    alert(changeBinary(num1));
+</script>
+</body>
+</html>

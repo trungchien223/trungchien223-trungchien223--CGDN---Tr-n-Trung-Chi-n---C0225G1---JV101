@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt("Nhập chuỗi ký tự:");
+    function differentSymbolsNaive(s) {
+        let arr = [];
+        for (let i = 0; i < s.length; i++) {
+            let character = s[i];
+            if (!arr.includes(character)) {
+                arr.push(character);
+            }
+        }
+        return arr.length;
+    }
+    let result = differentSymbolsNaive(inputStr);
+    alert(result);
+</script>
+</body>
+</html>

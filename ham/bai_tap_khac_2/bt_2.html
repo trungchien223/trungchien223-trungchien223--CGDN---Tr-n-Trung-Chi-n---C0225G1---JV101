@@ -12,11 +12,19 @@
             alert("Không phải là cạnh của 1 tam giác");
             return;
         }
-        // Sắp xếp các cạnh theo thứ tự tăng dần để kiểm tra tam giác vuông
-        let sides = [x, y, z].sort((a, b) => a - b);
-        let a = sides[0], b = sides[1], c = sides[2];
+        let max = x, a = y, b = z;
+        if (y > max) {
+            max = y;
+            a = x;
+            b = z;
+        }
+        if (z > max) {
+            max = z;
+            a = x;
+            b = y;
+        }
          // a² + b² = c²
-        if (a * a + b * b === c * c) {
+        if (a * a + b * b === max * max) {
             alert("Là 3 cạnh của 1 tam giác vuông");
         } else {
             alert("Chỉ là 3 cạnh của một tam giác");

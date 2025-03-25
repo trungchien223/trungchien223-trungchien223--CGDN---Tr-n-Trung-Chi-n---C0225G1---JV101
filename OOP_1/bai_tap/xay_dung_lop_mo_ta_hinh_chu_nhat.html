@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="300"></canvas>
+<script>
+  class Rectangle {
+    constructor(length, width) {
+      this.length = length;
+      this.width = width;
+    }
+    getArea() {
+      return this.length * this.width;
+    }
+    getPerimeter() {
+      return 2*(this.width + this.length);
+    }
+    display(x,y,context){
+        context.fillStyle = "black";
+        context.fillRect(x, y, this.width, this.length);
+    }
+  }
+  let rectangle = new Rectangle(300,200);
+  let canvas = document.getElementById("myCanvas");
+  let ctx1 = canvas.getContext("2d");
+  rectangle.display(20,40,ctx1)
+  document.write("<br>");
+  document.write("dien tich"+rectangle.getArea()+"<br>");
+  document.write("chu vi"+rectangle.getPerimeter());
+</script>
+</body>
+</html>

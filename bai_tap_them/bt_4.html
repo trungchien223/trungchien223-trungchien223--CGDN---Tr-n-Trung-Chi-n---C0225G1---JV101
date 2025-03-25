@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt("Nhập chuỗi:");
+    function formatString(str) {
+        let result = "";
+        let isNewWord = true;
+        for (let i = 0; i < str.length; i++) {
+            let char = str[i];
+            if (char !== " ") {
+                if (isNewWord) {
+                    result += char.toUpperCase();
+                } else {
+                    result += char.toLowerCase();
+                }
+                isNewWord = false;
+            } else if (!isNewWord) {
+                result += " ";
+                isNewWord = true;
+            }
+        }
+        return result.trim();
+    }
+    let resultStr = formatString(inputStr);
+    alert(resultStr);
+</script>
+</body>
+</html>

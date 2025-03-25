@@ -17,6 +17,7 @@
         }
         return true;
     }
+
     function checkPrime(arr) {
         for (let i = 0; i < arr.length; i++) {
             if (isPrime(arr[i])) {
@@ -25,7 +26,26 @@
         }
         return true;
     }
+
     alert(checkPrime([1, 2, 3, 4, 5]));
+    // cách khác
+
+<!--        function kiemTra(arr){-->
+<!--        for (let i = 0; i < arr.length; i++) {-->
+<!--        if (arr[i] < 2) {-->
+<!--        return false;-->
+<!--    }-->
+<!--        for (let i = 2; i < arr[i]; i++) {-->
+<!--        if (arr[i] % i === 0) {-->
+<!--        return false;-->
+<!--    }-->
+<!--    }-->
+
+<!--    }-->
+<!--        return true;-->
+<!--    }-->
+<!--        let mang = [11,3,2,7];-->
+<!--        alert(kiemTra(mang));-->
 </script>
 </body>
 </html>

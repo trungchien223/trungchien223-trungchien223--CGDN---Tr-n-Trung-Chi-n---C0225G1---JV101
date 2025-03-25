@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkTriangle(x, y, z) {
+        // Các cạnh phải lớn hơn 0 va Tổng hai cạnh bất kỳ phải lớn hơn cạnh còn lại
+        if (x <= 0 || y <= 0 || z <= 0 || x + y <= z || x + z <= y || y + z <= x) {
+            alert("Không phải là cạnh của 1 tam giác");
+            return;
+        }
+        let max = x, a = y, b = z;
+        if (y > max) {
+            max = y;
+            a = x;
+            b = z;
+        }
+        if (z > max) {
+            max = z;
+            a = x;
+            b = y;
+        }
+        // a² + b² = c²
+        if (a * a + b * b === max * max) {
+            alert("Là 3 cạnh của 1 tam giác vuông");
+        } else {
+            alert("Chỉ là 3 cạnh của một tam giác");
+        }
+    }
+    let x = parseFloat(prompt("Nhập cạnh x:"));
+    let y = parseFloat(prompt("Nhập cạnh y:"));
+    let z = parseFloat(prompt("Nhập cạnh z:"));
+    checkTriangle(x, y, z);
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Lớp Apple (Quả táo)
+    class Apple {
+        constructor() {
+            this.weight = 10; // Mặc định khối lượng táo là 10 đơn vị
+        }
+
+        // Kiểm tra táo còn khối lượng không
+        isEmpty() {
+            return this.weight <= 0;
+        }
+
+        // Giảm khối lượng quả táo khi bị ăn
+        decreaseWeight() {
+            if (!this.isEmpty()) {
+                this.weight--;
+            } else {
+                console.log("Quả táo đã hết!");
+            }
+        }
+
+        // Xem khối lượng quả táo
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    // Lớp Human (Con người)
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        // Phương thức nói chuyện
+        speak(sentence) {
+            console.log(`${this.name}: "${sentence}"`);
+        }
+
+        // Ăn táo
+        eat(apple) {
+            if (!apple.isEmpty()) {
+                apple.decreaseWeight(); // Giảm khối lượng táo
+                this.weight++; // Tăng cân nặng
+                console.log(`${this.name} ăn một miếng táo. Cân nặng: ${this.weight} kg`);
+            } else {
+                console.log(`${this.name}: "Không còn táo để ăn!"`);
+            }
+        }
+
+        // Kiểm tra khối lượng quả táo
+        checkApple(apple) {
+            console.log(`Quả táo còn ${apple.getWeight()} đơn vị khối lượng.`);
+        }
+
+        // Lấy thông tin về con người
+        getInfo() {
+            console.log(`${this.name} (${this.gender}) - Cân nặng: ${this.weight} kg`);
+        }
+    }
+
+    // Khởi tạo nhân vật Adam và Eva
+    let adam = new Human("Adam", "Nam", 70);
+    let eva = new Human("Eva", "Nữ", 50);
+    let apple = new Apple();
+
+    // Adam và Eva nói chuyện
+    adam.speak("có đói không?");
+    eva.speak("Có,có táo không?");
+
+    // Eva kiểm tra quả táo
+    eva.checkApple(apple);
+
+    // Adam và Eva lần lượt ăn táo
+    adam.eat(apple);
+    eva.eat(apple);
+    adam.eat(apple);
+    eva.eat(apple);
+    adam.eat(apple);
+
+    // Kiểm tra lại khối lượng táo
+    adam.checkApple(apple);
+
+    // Hiển thị thông tin của Adam và Eva sau khi ăn táo
+    adam.getInfo();
+    eva.getInfo();
+
+</script>
+</body>
+</html>

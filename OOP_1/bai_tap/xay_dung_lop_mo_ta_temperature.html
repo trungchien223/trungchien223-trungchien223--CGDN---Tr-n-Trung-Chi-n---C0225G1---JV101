@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(Celsius) {
+            if (Celsius < -273) {
+                alert("Nhiệt độ không thể lớn hơn -273 độ C");
+                return;
+            }
+            this.Celsius = Celsius;
+        }
+
+        getFahrenheit() {
+            return (this.Celsius * 9 / 5) + 32;
+        }
+
+        getKelvin() {
+            return this.Celsius + 273.15;
+        }
+    }
+    let celsiusInput=parseFloat(prompt("nhập độ C"));
+    let temperature = new Temperature(celsiusInput);
+    let fahrenheit = temperature.getFahrenheit();
+    let kelvin = temperature.getKelvin();
+    alert("Độ C sang độ F: " + fahrenheit.toFixed(2) + "°F");
+    alert("Độ C sang độ K: " + kelvin.toFixed(2) + "K");
+</script>
+</body>
+</html>

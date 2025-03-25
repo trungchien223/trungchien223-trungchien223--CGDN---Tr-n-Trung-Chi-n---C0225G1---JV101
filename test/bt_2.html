@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhap so"));
+    let arr1 = [];
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt(`Nhập phần tử thứ ${i + 1}:`));
+        arr1[i] = num
+    }
+    console.log("mang vua nhap la", arr1);
+
+    function checkDivisor(arr) {
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] % arr[i - 1] !== 0) {
+                return "NO";
+            }
+        }
+        return "OK";
+    }
+    let result = checkDivisor(arr1);
+    alert(result);
+</script>
+</body>
+</html>
